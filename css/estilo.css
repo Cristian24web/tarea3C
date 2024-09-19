@@ -1,0 +1,64 @@
+.contenedor{ /*padre*/
+    background-color: aqua;
+    padding: 10px;
+    font-size: 23px; 
+    text-align: center;
+    display: grid;
+    grid-gap: 10px; /*separacion de las cajas*/
+    /*grid-template-columns: repeat(4,1fr) 5fr;
+    grid-template-rows: repeat();*/
+
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 5fr 1fr;
+    grid-template-areas: "header  header  header"
+                         "nav  nav  nav"
+                         "section section ads"
+                         "footer footer footer";
+}
+.contenedor .header{
+    background-color: bisque;
+    grid-column: header; /*ocupa todo donde dice header*/
+}
+.contenedor .nav{
+    background-color: yellow;
+    grid-column: nav; /*ocupa todo donde dice header*/
+}
+.contenedor .section{
+    background-color: azure;
+    grid-column: section; /*ocupa todo donde dice header*/
+    padding: 20px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr;
+    grid-template-areas: "contenido1  contenido2";
+}
+.contenedor .section .conte1{
+    background-color: darkmagenta;
+    
+}
+.contenedor .section .conte2{
+    background-color: darkmagenta;
+}
+.contenedor .ads{ 
+    background-color: chartreuse;
+    grid-column: ads; /*ocupa todo donde dice header*/
+    padding: 14px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "publicidad"
+                          "hijo1"
+                          "hijo2";
+} 
+.contenedor .footer{
+    background-color: darkorange;
+    grid-column: footer; /*ocupa todo donde dice header*/
+}
+.contenedor .ads .hijo1{
+    background-color: blue;
+}
+.contenedor .ads .hijo2{
+    background-color: blue;
+}
